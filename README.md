@@ -12,3 +12,6 @@ on-line.
 
 The tutorial is here:
 http://gabracing.azurewebsites.net/Lab/GabRacingGameLab.htm
+
+The completed website is here:
+http://azurewebsample.azurewebsites.net/
