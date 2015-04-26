@@ -154,10 +154,17 @@ window.racing.data = window.racing.data || {};
             },
 
             // ToDo: Add code to get data for the specific country
+            getRankingLapTimesByCountry: function (successCallback, fields, countryCode) {
+                var filter = getPartitionFilter(countryCode);
+                getTableStorageData(auths.tracks[track].rankingLapTimesCountryTrack,
+                    successCallback, fields, filter);
+            },
+
             // ToDo: Add code to get the telemetry data for a specific lap
             getTelemetryData: function (successCallback, fields, lapId) {
                 var filter = getPartitionFilter(lapId);
-                getTableStorageData(auths.tracks[track].telemetryData, successCallback, fields, filter);
+                getTableStorageData(auths.tracks[track].telemetryData,
+                    successCallback, fields, filter);
             }
         };
     }

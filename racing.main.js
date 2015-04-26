@@ -125,17 +125,17 @@ window.racing.app = window.racing.app || {};
 
     // Country Statistics
     function initCountryStat(track, selector, countryCode) {
-
         // ToDo: Add code to get the country track data and pass it to the render method
-
-
+        track.getRankingLapTimesByCountry(function(data) {
+            renderRankingLapTimes(data, '.track-stats-country ' + selector, track, 'Country');
+        }, ['PartitionKey', 'PlayerName', 'Location', 'LapTimeMs', 'Damage', 'LapId'], countryCode);
     }
 
     function initCountryStats(countryCode) {
-
         // ToDo: Add code to initialize the country data for the three tracks
-
-
+        initCountryStat(racing.data.beginnerTrack, '.track-stats-beginner', countryCode);
+        initCountryStat(racing.data.advancedTrack, '.track-stats-advanced', countryCode);
+        initCountryStat(racing.data.expertTrack, '.track-stats-expert', countryCode);
     }
 
     // Location Statistics
@@ -160,7 +160,7 @@ window.racing.app = window.racing.app || {};
 
     // ToDo: Set your country code and location ID.
     var yourLocationId = '1251';
-    var yourCountryCode = 'DA';
+    var yourCountryCode = 'DK';
 
     // Initialize the page with location statistics
     initLocationStats(yourLocationId);
