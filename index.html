@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Location: 1251, country: DK -->
+    <title>Web in Azure!</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/cosmo/bootstrap.min.css">
+    <link href="racing.styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Web in Azure</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <!-- Todo: Add HTML code for the location lap tables -->
+        <h1 class="title">Top Lap Times for Cph</h1>
+        <div class="track-stats-location row">
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Beginner lap</div>
+                    <table class="track-stats-beginner table table-striped table-hover"></table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Advanced lap</div>
+                    <table class="track-stats-advanced table table-striped table-hover"></table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">Expert lap</div>
+                    <table class="track-stats-expert table table-striped table-hover"></table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Todo: Add HTML code for the country lap tables -->
+        <!-- Todo: Add HTML code for the telemetry graphs. -->
+        <div id="TelemtryGraphWrapper" style="display: none;">
+            <h1>Telemetry</h1>
+            <div class="panel panel-success">
+                <div class="panel-heading title"></div>
+                <div class="panel-body">
+                    <div class="graph"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- References to JavaScript files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.0/dygraph-combined.js"></script>
+    <script src="racing.data.js"></script>
+    <script src="racing.main.js"></script>
+
+</body>
+
+</html>

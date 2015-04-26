@@ -1,0 +1,31 @@
+﻿.panel table {
+
+    margin-bottom: 0;
+
+}
+
+ 
+
+.table-hover tr td {
+
+    cursor: pointer;
+
+}
+
+ 
+
+#TelemtryGraphWrapper {
+
+    width: 100%;
+
+}
+
+ 
+
+#TelemtryGraphWrapper .graph {
+
+    width: 100% !important;
+
+}
+
+ 
